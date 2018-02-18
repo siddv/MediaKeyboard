@@ -17,8 +17,6 @@ Encoder volumeKnob(8, 9);
 long volumePos = volumeKnob.read();
 
 void setup() {
-  Serial.begin(9600);
-  
   pinMode(3, INPUT_PULLUP);
   pinMode(4, INPUT_PULLUP);
   pinMode(5, INPUT_PULLUP);
