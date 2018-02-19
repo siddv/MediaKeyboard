@@ -61,13 +61,13 @@ void loop() {
   }
 
   // Volume Encoder
-  if (newVolumePos > volumePos) {
-    Keyboard.press(KEY_MEDIA_VOLUME_INC);
-    Keyboard.release(KEY_MEDIA_VOLUME_INC);
-    volumePos = newVolumePos;
-  } else if (newVolumePos < volumePos) {
+  if (newVolumePos > volumePos + 3) {
     Keyboard.press(KEY_MEDIA_VOLUME_DEC);
     Keyboard.release(KEY_MEDIA_VOLUME_DEC);
+    volumePos = newVolumePos;
+  } else if (newVolumePos < volumePos - 3) {
+    Keyboard.press(KEY_MEDIA_VOLUME_INC);
+    Keyboard.release(KEY_MEDIA_VOLUME_INC);
     volumePos = newVolumePos;
   }
 
