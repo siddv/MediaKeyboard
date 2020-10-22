@@ -54,7 +54,10 @@ void loop() {
     Keyboard.release(KEY_MEDIA_MUTE);
   }
   if (cyber1.fallingEdge()) {
-    // Do something at some point
+    // If I can't get the door
+    Keyboard.write("@channel can anyone get that? I'm occupied.");
+    Keyboard.press(KEY_ENTER);
+    Keyboard.release(KEY_ENTER);
   }
   if (cyber2.fallingEdge()) {
     // Do something at some point
